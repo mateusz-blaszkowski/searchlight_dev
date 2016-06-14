@@ -1,0 +1,3 @@
+my_token=$(curl -s -k -X 'POST' -v http://10.91.97.32:5000/v2.0/tokens -d '{"auth":{"passwordCredentials":{"username": "admin", "password":"password"}, "tenantName":"admin"}}'  -H 'Content-type: application/json'  | jq -r .access.token.id)
+curl -s -H 'Content-type: application/json' -H "X-Auth-Token: $my_token" -X 'POST' -v http://10.91.96.73:9393/v1/search -d  '{"query": {"match_all": {}},"type": ["OS::Ironic::Node"]}' | jq '.'
+#curl -s -H 'Content-type: application/json' -H "X-Auth-Token: $my_token" -X 'POST' -v http://10.91.96.73:9393/v1/search -d  '{"query": {"match_all": {}},"type": ["OS::Glance::Image"]}' | jq '.'

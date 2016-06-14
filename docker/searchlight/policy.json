@@ -1,0 +1,21 @@
+{
+    "context_is_admin":  "role:admin",
+    "default": "",
+
+    "query": "",
+    "plugins_info": "",
+    "facets": "",
+
+    "resource:OS::Glance::Image:allow": "",
+    "resource:OS::Glance::Metadef:allow": "",
+    "resource:OS::Nova::Server:allow": "",
+    "resource:OS::Nova::Hypervisor:allow": "role:admin",
+    "resource:OS::Cinder::Volume:allow": "",
+    "resource:OS::Cinder::Snapshot:allow": "",
+    "resource:OS::Designate::Zone:allow": "",
+    "resource:OS::Designate::RecordSet:allow": "",
+    "resource:OS::Neutron::Net:allow": "",
+    "resource:OS::Neutron::Port:allow": "",
+    "resource:OS::Neutron::Subnet:allow": "",
+    "resource:OS::Neutron::Router:allow": ""
+}
